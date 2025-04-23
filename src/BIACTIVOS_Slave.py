@@ -93,7 +93,7 @@ if len(sys.argv) == 8:  # 8
         var_periodo = PAR7    # var_periodo = int(f'{dt.now().year}{dt.now().month}')
         var_fecha_proceso = dt.now().date()
         files_csv = PAR2
-        file_path = f"C:\\MisCompilados\\file_in\\BIACTIVOS\\{files_csv}.txt"
+        file_path = f"C:\\MisCompilados\\PROY_BIACTIVOS\\file_in\\{files_csv}.txt"
 
         # Importación del fichero "FileN.txt" en un DataFrame:
         df = pd.read_csv(file_path, sep='\t', header=None,

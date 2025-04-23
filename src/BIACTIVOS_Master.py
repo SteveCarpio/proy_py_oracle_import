@@ -28,10 +28,8 @@
 #                                                                          By --> SteveCarpio2024
 #------------------------------------------------------------------------------------------------
 
-
 import cfg.BIACTIVOS_variables as sTv
 from   cfg.BIACTIVOS_librerias_m import *
-
 
 #-------------- Librerías SLAVE (dependencias para Compile)
 #import pandas as pd
@@ -39,12 +37,12 @@ from   cfg.BIACTIVOS_librerias_m import *
 #--------------
 
 # File de entrada de ANEXO3.txt
-file_entrada = f"C:\\MisCompilados\\file_in\\BIACTIVOS\\File.txt"
+file_entrada = f"C:\\MisCompilados\\PROY_BIACTIVOS\\file_in\\File.txt"
 
 # --------------------------------------------------------------------------
 
 # MODO: Desarrollo
-file_slave = f"C:\\Users\\scarpio\\Documents\\GitHub\\sTv_Publico\\CODE\\PYTHON\\SUBPROCESS\\BACTIVOS\\cfg\\BIACTIVOS_Slave.py"
+file_slave = f"C:\\Users\\scarpio\\Documents\\GitHub\\proy_py_oracle_import\\src\\BIACTIVOS_Slave.py"
 
 # MODO: Compile 
 #current_dir = os.path.dirname(sys.executable)
