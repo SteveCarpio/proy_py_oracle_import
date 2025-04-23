@@ -101,7 +101,7 @@ def ejecucion_multi_hilo():
         # Desarrollo
         proceso = subprocess.Popen(["python", file_slave, str(i), tabla_txt[i], str(tabla_ora), oracle_dns, oracle_uid, oracle_pwd, str(var_periodo)])  # Desarrollo
         # Compile
-        #proceso = subprocess.Popen([file_slave, str(i), tabla_txt[i], str(tabla_ora), oracle_dns, oracle_uid, oracle_pwd])            # Compile
+        #proceso = subprocess.Popen([file_slave, str(i), tabla_txt[i], str(tabla_ora), oracle_dns, oracle_uid, oracle_pwd, str(var_periodo)])            # Compile
         procesos.append(proceso)  
     # Esperar a que todos los procesos terminen
     for proceso in procesos:

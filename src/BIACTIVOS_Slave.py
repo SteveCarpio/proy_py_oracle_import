@@ -45,6 +45,8 @@ if len(sys.argv) == 8:  # 8
     PAR6 = sys.argv[6]         # Oracle PWD sTv.BIACT_ora_pwd
     PAR7 = sys.argv[7]         # PERIODO AAAAMM
 
+    print(f"xxx{PAR7}XXX")
+
     if len(PAR1) == 1:
         PAR11=f"0{PAR1}" 
     else:
