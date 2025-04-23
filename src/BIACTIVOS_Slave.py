@@ -23,11 +23,7 @@
 #                                                                          By --> SteveCarpio2024
 #------------------------------------------------------------------------------------------------
 
-# Carga de Librerías
-import pandas as pd
-import pyodbc
-import sys
-from datetime import datetime as dt
+from   cfg.BIACTIVOS_librerias_s import *
 
 #print(f"Parametro0:  {sys.argv[0]}")
 #print(f"Parametro1:  {sys.argv[1]}")
@@ -42,7 +38,7 @@ from datetime import datetime as dt
 if len(sys.argv) == 8:  # 8
     PAR0 = sys.argv[0]         # Nombre del fichero de ejecución
     PAR1 = sys.argv[1]         # Número de Hilo
-    PAR2 = sys.argv[2]         # Tabla de Entrada "FileN" sin extención '.txt'
+    PAR2 = sys.argv[2]         # Tabla de Entrada "FileN" sin extensión '.txt'
     PAR3 = sys.argv[3]         # Oracle Tabla
     PAR4 = sys.argv[4]         # Oracle DNS sTv.BIACT_ora_dns
     PAR5 = sys.argv[5]         # Oracle UID sTv.BIACT_ora_uid
@@ -56,7 +52,7 @@ if len(sys.argv) == 8:  # 8
 
     ### ----------------------------------- Funciones -----------------------------------
 
-    # 1 - def Oracle_Establece_Conexion(par_dsn , par_uid , par_pwd) 
+    # 1 - def Oracle_Establece_Conexión(par_dsn , par_uid , par_pwd) 
     def Oracle_Establece_Conexion(par_dsn, par_uid,par_pwd):
         try:
             # Cadena de conexión a la base de datos Oracle

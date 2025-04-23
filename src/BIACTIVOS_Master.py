@@ -28,13 +28,11 @@
 #                                                                          By --> SteveCarpio2024
 #------------------------------------------------------------------------------------------------
 
-# ------------- Librerías PERSONALIZADAS
-import cfg.PARAMETROS_COMUNES as sTv
-#-------------- Librerías MASTER
-import subprocess
-import os
-import sys
-from datetime import datetime as dt
+
+import cfg.BIACTIVOS_variables as sTv
+from   cfg.BIACTIVOS_librerias_m import *
+
+
 #-------------- Librerías SLAVE (dependencias para Compile)
 #import pandas as pd
 #import pyodbc
@@ -45,7 +43,7 @@ file_entrada = f"C:\\MisCompilados\\file_in\\BIACTIVOS\\File.txt"
 
 # --------------------------------------------------------------------------
 
-# MODO: Desrrollo
+# MODO: Desarrollo
 file_slave = f"C:\\Users\\scarpio\\Documents\\GitHub\\sTv_Publico\\CODE\\PYTHON\\SUBPROCESS\\BACTIVOS\\cfg\\BIACTIVOS_Slave.py"
 
 # MODO: Compile 
@@ -54,7 +52,7 @@ file_slave = f"C:\\Users\\scarpio\\Documents\\GitHub\\sTv_Publico\\CODE\\PYTHON\
 
 # --------------------------------------------------------------------------
 
-# Parametros Comunes
+# Parámetros Comunes
 tiempo_inicio = dt.now()
 tabla_txt = ["x"]
 procesos = []
@@ -93,7 +91,7 @@ def dividir_txt_x_partes():
 
         # Crea lista con los nombres de salida
         tabla_txt.append(f"File{i}")
-    # Imprimir un mesaje para la log
+    # Imprimir un mensaje para la log
     print(f"  El archivo de entrada tiene {len(lineas):,} registros dividido en {numero_hilos} partes.".replace(",","."))
 
 # Función que nos lanzará los SUBPROCESS de la lista "procesos[...]" 
@@ -212,7 +210,7 @@ if continuar == "s" or continuar == "S":
     print("\n- - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - ")
 
     # ---------------------------------- EJECUCION DEL PROCESO
-    # Imprimir incio del SubProcess multi-hilo
+    # Imprimir inicio del SubProcess multi-hilo
     print(f"\nINICIO - SUBPROCESS-MULTI HILO.... {tiempo_inicio} \n")
 
     # Llamar a las funciones
